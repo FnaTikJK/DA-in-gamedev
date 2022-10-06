@@ -39,10 +39,23 @@
 
 
 ## Задание 1
-### Написать программу Hello World на Python и Unity
-![2022-09-18_17-38-29](https://user-images.githubusercontent.com/70794890/190987480-2e672255-3cb8-49c8-acff-dead8348d17e.png)
-![2022-09-18_17-39-17](https://user-images.githubusercontent.com/70794890/190987487-5f4d643c-db16-4628-a3af-3b2cde5f377b.png)
-![2022-09-18_17-44-46](https://user-images.githubusercontent.com/70794890/190987512-dfd69678-6aaa-48f4-a6df-5b1cc90be2ef.png)
+### Реализовать совместную работу Python-GoogleSheets-Unity
+- Подключаю API для работы с таблицами и диском в google console
+![image](https://user-images.githubusercontent.com/70794890/194406437-fa08e65b-c2ae-4f74-b8a5-13c520bab74f.png)
+![image](https://user-images.githubusercontent.com/70794890/194406496-6414a37b-41f2-4f3a-b24c-f2edcdb4c096.png)
+
+- Реализовываю запись данных из скрипта на python в google-таблицу
+![image](https://user-images.githubusercontent.com/70794890/194407355-adc42dff-d14f-48c4-9cc3-460f606af392.png)
+![image](https://user-images.githubusercontent.com/70794890/194407392-4fd5ac21-3b32-4df1-b787-af20a256675c.png)
+
+- Создаю проект на Unity и подключаю к нему данные из гугл-таблицы
+![image](https://user-images.githubusercontent.com/70794890/194407616-6324a327-85d5-46e9-b767-47f43577e043.png)
+![image](https://user-images.githubusercontent.com/70794890/194407806-94271c20-93fe-44d8-99b9-000d34cb5821.png)
+
+- Пишу функционал на Unity который воспроизводит аудио в зависимости от значения данных из таблицы
+![image](https://user-images.githubusercontent.com/70794890/194408001-52cbabe0-2e89-499a-95d4-82150e30acbe.png)
+![image](https://user-images.githubusercontent.com/70794890/194408036-39585a85-25e7-41b3-9224-e7ada5de62af.png)
+
 
 
 ## Задание 2
