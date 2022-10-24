@@ -38,15 +38,82 @@
 Познакомиться с программными средствами для создания системы машинного обучения и ее интеграции в Unity.
 
 
-```rd
-a = 10;
-b = 5;
-```
-
-
 ## Задание 1
 ### 
+- Создаю пустой проект на Unity 
+  ![2022-10-24_17-49-05](https://user-images.githubusercontent.com/70794890/197545531-e5bb62ae-4745-4ec9-a52f-96fef5e5571f.png)
+- Устанавливаю packages для Unity
+  ![2022-10-24_17-49-37](https://user-images.githubusercontent.com/70794890/197545862-4c16c7fb-8391-43c1-878b-e1075780f0cc.png)
+- Скачиваю нужные библиотеки для Python
+  ![Uploading 2022-10-24_17-50-53.png…]()
+- Создаю на сцене плоскость, куб и сферу
+  ![2022-10-24_17-57-34](https://user-images.githubusercontent.com/70794890/197546168-6f052b17-edd1-4741-94f3-e1f8a29449b8.png)
+- Создаю скрипт RollerAgent и подключаю его к шару
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
+using Unity.MLAgents.Actuators;
 
+public class RollerAgent : Agent
+{
+    Rigidbody rBody;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rBody = GetComponent<Rigidbody>();
+    }
+
+    public Transform Target;
+    public override void OnEpisodeBegin()
+    {
+        if (this.transform.localPosition.y < 0)
+        {
+            this.rBody.angularVelocity = Vector3.zero;
+            this.rBody.velocity = Vector3.zero;
+            this.transform.localPosition = new Vector3(0, 0.5f, 0);
+        }
+
+        Target.localPosition = new Vector3(Random.value * 8-4, 0.5f, Random.value * 8-4);
+    }
+    public override void CollectObservations(VectorSensor sensor)
+    {
+        sensor.AddObservation(Target.localPosition);
+        sensor.AddObservation(this.transform.localPosition);
+        sensor.AddObservation(rBody.velocity.x);
+        sensor.AddObservation(rBody.velocity.z);
+    }
+    public float forceMultiplier = 10;
+    public override void OnActionReceived(ActionBuffers actionBuffers)
+    {
+        Vector3 controlSignal = Vector3.zero;
+        controlSignal.x = actionBuffers.ContinuousActions[0];
+        controlSignal.z = actionBuffers.ContinuousActions[1];
+        rBody.AddForce(controlSignal * forceMultiplier);
+
+        float distanceToTarget = Vector3.Distance(this.transform.localPosition, Target.localPosition);
+
+        if(distanceToTarget < 1.42f)
+        {
+            SetReward(1.0f);
+            EndEpisode();
+        }
+        else if (this.transform.localPosition.y < 0)
+        {
+            EndEpisode();
+        }
+    }
+}
+
+```
+
+- Объекту «сфера» добавляю компоненты Rigidbody, Decision Requester, Behavior Parameters и настраиваю их
+  
+- Добавляю файл конфигурации для нейронной сети 
+    ![Uploading image.png…]()
+- Запускаю работу ML агента
 
 
 ## Задание 2
