@@ -45,7 +45,7 @@
 - Устанавливаю packages для Unity
   ![2022-10-24_17-49-37](https://user-images.githubusercontent.com/70794890/197545862-4c16c7fb-8391-43c1-878b-e1075780f0cc.png)
 - Скачиваю нужные библиотеки для Python
-  ![Uploading 2022-10-24_17-50-53.png…]()
+  ![2022-10-24_17-50-53](https://user-images.githubusercontent.com/70794890/197548868-c4414281-c230-4751-8efc-14ff4c1493b1.png)
 - Создаю на сцене плоскость, куб и сферу
   ![2022-10-24_17-57-34](https://user-images.githubusercontent.com/70794890/197546168-6f052b17-edd1-4741-94f3-e1f8a29449b8.png)
 - Создаю скрипт RollerAgent и подключаю его к шару
@@ -110,11 +110,11 @@ public class RollerAgent : Agent
 ```
 
 - Объекту «сфера» добавляю компоненты Rigidbody, Decision Requester, Behavior Parameters и настраиваю их
-  
+  ![2022-10-24_19-11-14](https://user-images.githubusercontent.com/70794890/197548113-40d54c92-77e0-4477-babf-5de0957e4498.png)
 - Добавляю файл конфигурации для нейронной сети 
-    ![Uploading image.png…]()
+    ![image](https://user-images.githubusercontent.com/70794890/197548068-678cb27e-b557-438a-b95e-9ffcf46aaa99.png)
 - Запускаю работу ML агента
-
+  
 
 ## Задание 2
 ### 
