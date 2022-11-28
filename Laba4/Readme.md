@@ -80,13 +80,39 @@
 
 ## Задание 3
 ### Построить визуальную модель работы перцетрона на сцене Unity.
+Создаю скрипт для симуляции логического И
+```
+using UnityEngine;
 
+public class SimulateAND : MonoBehaviour
+{
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Renderer>().material.color == Color.white 
+            && gameObject.GetComponent<Renderer>().material.color == Color.white)
+        {
+            other.gameObject.GetComponent<Renderer>().material.color = Color.white;
+            gameObject.GetComponent<Renderer>().material.color = Color.white;
+        }
+        else
+        {
+            other.gameObject.GetComponent<Renderer>().material.color = Color.black;
+            gameObject.GetComponent<Renderer>().material.color = Color.black;
+        }
+    }
+}
+```
+Белый цвет - 1. Чёрный цвет - 0
+
+Подготавливаю сцену
+![image](https://user-images.githubusercontent.com/70794890/204313158-4ac53cb7-5484-488e-add3-c089021f58fa.png)
+Результат
+![image](https://user-images.githubusercontent.com/70794890/204313314-8f083050-58c5-4ccd-8551-fdefb29c5ed7.png)
 
 
 ## Выводы
 
-В результате данной лабораторной работы я познакомился с основными операторами языка Python на примере линейной регрессии, узнал о методе вычилсения "потерь" предсказания и методе оптиизации для минимизации "потерь".
-Также узнал некоторые базовые методы библиотек numpy и matplotlib
+В результате данной лабораторной работы я познакомился с Перцептроном, научился интегрировать его в Unity, узнал про эпохи обучения, ошибку и их взаимосвязь.
 
 | Plugin | README |
 | ------ | ------ |
