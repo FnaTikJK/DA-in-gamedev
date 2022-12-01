@@ -53,6 +53,11 @@
 
 ## Задание 2
 ### Измените параметры файла. yaml-агента и определить какие параметры и как влияют на обучение модели
+num_layers = 2 => 10
+Получил следующие графики
+![image](https://user-images.githubusercontent.com/70794890/205014989-a7a8e4b3-69bb-406e-85fc-a469bdbf1fde.png)
+
+![image](https://user-images.githubusercontent.com/70794890/205015023-d3510d3a-3f85-42cb-ba2e-d9e38b612810.png)
 
 
 
