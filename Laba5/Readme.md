@@ -67,6 +67,23 @@ learning_rate = 3.0e-4 => 0.5e-4
 
 ![image](https://user-images.githubusercontent.com/70794890/205250480-4cf08f28-beb5-4e1d-a7f3-07c3f80fa76a.png)
 
+beta = 1.0e-2 => 1.0e-4
+
+![image](https://user-images.githubusercontent.com/70794890/205252144-561d86d7-c79f-4d6a-ae36-764f97dc1f67.png)
+
+![image](https://user-images.githubusercontent.com/70794890/205252178-17db0a38-b138-41e8-97a2-715fce358e8e.png)
+
+lambd = 0.95 => 0.7
+
+![image](https://user-images.githubusercontent.com/70794890/205253388-d0651812-2d99-45c8-8a2f-9c211f5fb503.png)
+
+
+![image](https://user-images.githubusercontent.com/70794890/205253539-8fdc66e5-81aa-4055-bc3c-eb4eac943b72.png)
+
+
+
+
+
 
 
 
