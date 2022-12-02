@@ -62,6 +62,11 @@ num_epoch = 3 => 10
 ![image](https://user-images.githubusercontent.com/70794890/205248645-480ff42f-ae70-4a4d-8396-67aa24f53e4b.png)
 
 
+learning_rate = 3.0e-4 => 0.5e-4
+![image](https://user-images.githubusercontent.com/70794890/205250444-49db8620-ef95-4944-8242-75c847478404.png)
+
+![image](https://user-images.githubusercontent.com/70794890/205250480-4cf08f28-beb5-4e1d-a7f3-07c3f80fa76a.png)
+
 
 
 
