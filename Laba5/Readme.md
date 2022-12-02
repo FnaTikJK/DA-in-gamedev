@@ -41,13 +41,15 @@
 ## Задание 1
 ### Интегрировать экономическую систему в проект Unity и обучить Ml Agent.
 Скачал проект, установил необходимые библиотеки запустил обучение ml-агента
-![image](https://user-images.githubusercontent.com/70794890/205007629-b4ec7cac-543f-4533-ba8f-3581bde4840d.png)
+![image](https://user-images.githubusercontent.com/70794890/205243155-41a4daf4-b597-43fd-9ab6-75b7b3c54c52.png)
+
 
 Установил tensorflow, запустил tensorboard. Поулчил следующие графики
 
-![image](https://user-images.githubusercontent.com/70794890/205011559-f819c4eb-806c-4309-8b62-614572436d41.png)
+![2022-12-02_12-52-56](https://user-images.githubusercontent.com/70794890/205243278-d293ff84-8ac0-44bf-ac95-d682893876aa.png)
 
-![image](https://user-images.githubusercontent.com/70794890/205011606-b21d1bc9-5003-4b91-9a27-e507db5f7ef5.png)
+![2022-12-02_12-53-12](https://user-images.githubusercontent.com/70794890/205243285-20f0c581-0622-4607-bb92-753c4340beec.png)
+
 
 
 
