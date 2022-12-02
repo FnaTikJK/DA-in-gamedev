@@ -62,7 +62,12 @@ num_epoch = 3 => 10
 ![image](https://user-images.githubusercontent.com/70794890/205248645-480ff42f-ae70-4a4d-8396-67aa24f53e4b.png)
 
 
-learning_rate = 3.0e-4 => 0.5e-4
+### learning_rate 
+3.0e-4 => 0.5e-4
+
+Определяет скорость обучения(длину "шага). В каждой сети имеет своё значение, которое подбирается путём проб и ошибок, тк слишком маленькое значение может оставить ошибку сидеть в яме, а болбое перешагивать лучшие решения и также держать в яме.
+
+Как видно по графикам, после уменьшения модель стала обучаться дольше, но она, в теории, может дать более лучший результат в конце.
 ![image](https://user-images.githubusercontent.com/70794890/205250444-49db8620-ef95-4944-8242-75c847478404.png)
 
 ![image](https://user-images.githubusercontent.com/70794890/205250480-4cf08f28-beb5-4e1d-a7f3-07c3f80fa76a.png)
@@ -81,57 +86,36 @@ lambd = 0.95 => 0.7
 ![image](https://user-images.githubusercontent.com/70794890/205253539-8fdc66e5-81aa-4055-bc3c-eb4eac943b72.png)
 
 
+epxilon = 0.2 => 0.3
+
+![image](https://user-images.githubusercontent.com/70794890/205254573-8066350d-04b4-4e64-be56-dd6e9eaeabf7.png)
 
 
+![image](https://user-images.githubusercontent.com/70794890/205254640-2972a1c8-7fdb-4ac3-83ec-e4a249bd2aff.png)
 
 
 
 
 ## Задание 3
-### Должна ли величина loss стремиться к нулю при изменении исходных данных? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ.
+### Опишите результаты, выведенные в TensorBoard.
 
-Да, должна, тк решение задачи, которую писали до этого - минимизация этой функции. Это значит, что если программа работает корректно, то и loss стремится к нулю.
-Приведу пример
-- Беру другие данные 
+Cumulative reward - cреднее вознаграждение за эпизод. Имеет небольшие изменения. В лучшем случае, должно последовательно увеличиваться с течением времени.
 
-![image](https://user-images.githubusercontent.com/70794890/190989316-311d9950-66aa-4d19-b204-ab5a5f829233.png)
-- Смотрю "потери" на 1 шаге 
+Episode Length - средняя продолжительность эпизода в среде для агентов.
 
-![image](https://user-images.githubusercontent.com/70794890/190989369-6f26e787-f827-4c28-888e-a0a4e13cd641.png)
-- Смотрю "потери" на 1000 шаге
+Policy Loss - этот график определяет величину изменения политики со временем. Должен стремиться вниз, показывая, что политика всё лучше принимает решения.
 
-![image](https://user-images.githubusercontent.com/70794890/190989427-55de8039-59ab-4dee-84cd-76b5a1291815.png)
+Value Loss - это средняя потеря функции значения. Будет увеличиваться по мере увеличения вознаграждения, а после становления стабильного награждения должно уменьшаться.
 
-## Задание 3
-### Построить визуальную модель работы перцетрона на сцене Unity.
-Создаю скрипт для симуляции логического И
-```
-using UnityEngine;
+Beta - график, показывающий изменение силы энтропийной регуляризации, которая делает политику агента «более случайной».
 
-public class SimulateAND : MonoBehaviour
-{
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.GetComponent<Renderer>().material.color == Color.white 
-            && gameObject.GetComponent<Renderer>().material.color == Color.white)
-        {
-            other.gameObject.GetComponent<Renderer>().material.color = Color.white;
-            gameObject.GetComponent<Renderer>().material.color = Color.white;
-        }
-        else
-        {
-            other.gameObject.GetComponent<Renderer>().material.color = Color.black;
-            gameObject.GetComponent<Renderer>().material.color = Color.black;
-        }
-    }
-}
-```
-Белый цвет - 1. Чёрный цвет - 0
+Entropy - соответствует тому, насколько случайны решения, показывает величину исследования агента. Должно последовательно уменьшаться с течением обучения.
 
-Подготавливаю сцену
-![image](https://user-images.githubusercontent.com/70794890/204313158-4ac53cb7-5484-488e-add3-c089021f58fa.png)
-Результат
-![image](https://user-images.githubusercontent.com/70794890/204313314-8f083050-58c5-4ccd-8551-fdefb29c5ed7.png)
+Learning Rate - соответствует скорости обучения, будет постепенно уменьшаться с течением времени.
+
+Extrinsic Reward - соответствует среднему совокупному вознаграждению, полученному от окружающей среды за эпизод.
+
+Value Estimate - это среднее значение, посещённое всеми состояниями агента. Чтобы отражать увеличение знаний агента, это значение должно расти, а затем стабилизироваться.
 
 
 ## Выводы
