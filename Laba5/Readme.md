@@ -55,11 +55,12 @@
 
 ## Задание 2
 ### Измените параметры файла. yaml-агента и определить какие параметры и как влияют на обучение модели
-num_layers = 2 => 10
+num_epoch = 3 => 10
 Получил следующие графики
-![image](https://user-images.githubusercontent.com/70794890/205014989-a7a8e4b3-69bb-406e-85fc-a469bdbf1fde.png)
+![image](https://user-images.githubusercontent.com/70794890/205248609-ee571774-422d-441d-a9f6-8fa851c712b8.png)
 
-![image](https://user-images.githubusercontent.com/70794890/205015023-d3510d3a-3f85-42cb-ba2e-d9e38b612810.png)
+![image](https://user-images.githubusercontent.com/70794890/205248645-480ff42f-ae70-4a4d-8396-67aa24f53e4b.png)
+
 
 
 
