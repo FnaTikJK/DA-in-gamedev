@@ -102,10 +102,13 @@
 0.2 => 0.3
 
 Порог расхождения между старой и новой политикой агента, при которой он готов её менять. Чем ниже значение - тем более медленное и стабильное обучение.
-![image](https://user-images.githubusercontent.com/70794890/205254573-8066350d-04b4-4e64-be56-dd6e9eaeabf7.png)
+
+Как видно по графикам, обучение стало происходить быстрее, но и стабильность его упала.
+![image](https://user-images.githubusercontent.com/70794890/205259681-1a7c1f38-da87-4b7b-bad2-6f2f799a3c22.png)
 
 
-![image](https://user-images.githubusercontent.com/70794890/205254640-2972a1c8-7fdb-4ac3-83ec-e4a249bd2aff.png)
+![image](https://user-images.githubusercontent.com/70794890/205259827-75e6ffdd-42f9-4a3d-8e96-4312f6ef0d29.png)
+
 
 
 
